@@ -76,7 +76,7 @@ class Game {
         this.setPoints(this.currentPoints - nextUpgrade.cost);
 
         this.pointsPerClick = nextUpgrade.value;
-        this.playAudio("sound-sfx", "/sounds/yeah.mp3");
+        this.playAudio("sound-sfx", "./sounds/yeah.mp3");
         this.upgrades.perClick.current++;
 
         this.refreshUpgradeBar();
@@ -95,7 +95,7 @@ class Game {
         this.setPoints(this.currentPoints - nextUpgrade.cost);
 
         this.setAutoClickPerTime(nextUpgrade.value);
-        this.playAudio("sound-sfx", "/sounds/yeah.mp3");
+        this.playAudio("sound-sfx", "./sounds/yeah.mp3");
         this.upgrades.perSecond.current++;
 
         this.refreshUpgradeBar();
@@ -114,7 +114,7 @@ class Game {
   }
 
   onGameStart() {
-    this.playAudio("sound-music", "/sounds/music.mp3");
+    this.playAudio("sound-music", "./sounds/music.mp3");
   }
 
   refreshUpgradeBar() {
@@ -184,7 +184,7 @@ class Game {
 
     if(this.currentPoints >= 1000) {
       this.setScreen("game-end-screen")
-      this.playAudio("sound-music", "/sounds/congratulations.mp3")
+      this.playAudio("sound-music", "./sounds/congratulations.mp3")
     }
   }
 
