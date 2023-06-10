@@ -1,5 +1,5 @@
 class Game {
-  currentPoints = 999;
+  currentPoints = 0;
   pointsPerClick = 1;
   autoPointsPerSec = 0;
 
