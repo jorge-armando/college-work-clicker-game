@@ -1,0 +1,95 @@
+#game-title,
+#start-game-button,
+#points-container,
+#click-button,
+#game-end-screen p {
+  transform: translate(-50%, -50%);
+}
+
+#game-title {
+  position: absolute;
+  top: 78px;
+  left: 50%;
+  font-size: 90px;
+  text-align: center;
+  width: 100%;
+  line-height: 1;
+}
+
+#start-game-button {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  font-size: 84px;
+  text-decoration: underline;
+}
+
+#start-game-button:hover {
+  text-decoration: none;
+}
+
+#points-container {
+  position: absolute;
+  left: 50%;
+  top: 13%;
+  font-size: 64px;
+  text-align: center;
+  line-height: 1;
+}
+
+#click-button {
+  width: 370px;
+  height: 370px;
+  user-select: none;
+  position: absolute;
+  left: 50%;
+  top: 48%;
+}
+
+#click-button img {
+  user-drag: none;
+  -webkit-user-drag: none;
+}
+
+#click-button:active {
+  transform: translate(-50%, -50%) scale(1.02);
+}
+
+#click-button img {
+  animation: rotating 20s linear infinite;
+}
+
+#upgrade-area {
+  margin-top: auto;
+  padding: 20px;
+  position: absolute;
+  width: 100%;
+  bottom: 0;
+  background-color: rgba(0,0,0,0.4);
+  font-size: 30px;
+  color: #fff;
+  display: flex;
+  justify-content: space-between;
+}
+
+#upgrade-area button:disabled {
+  opacity: 0.5;
+  cursor: normal;
+  cursor: initial;
+}
+
+#game-end-screen p {
+  position: absolute;
+  top: 48%;
+  left: 50%;
+  font-size: 80px;
+}
+
+@keyframes rotating {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}

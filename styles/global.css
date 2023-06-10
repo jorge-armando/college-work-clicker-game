@@ -1,0 +1,51 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-weight: 400;
+  font-family: "minstrelposterwhg.postertwonf";
+  text-shadow: 2px 2px #000;
+}
+
+html {
+  line-height: 1.3;
+  color: #ca3c4a;
+  font-size: 20px;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 0;
+  height: 100vh;
+}
+
+button {
+  border: 0;
+  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+  font-size: inherit;
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+#game-start-screen,
+#game-screen,
+#game-end-screen {
+  display: none;
+}
+
+#game {
+  position: relative;
+  width: 800px;
+  height: 800px;
+  background-image: url('/images/background2.avif');
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
