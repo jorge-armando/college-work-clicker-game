@@ -117,6 +117,12 @@ class Game {
     this.playAudio("sound-music", "./sounds/music.mp3");
   }
 
+  onGameEnd() {
+    clearInterval(this.autoClickIntervalId);
+    this.setScreen("game-end-screen");
+    this.playAudio("sound-music", "./sounds/congratulations.mp3");
+  }
+
   refreshUpgradeBar() {
     Object.keys(this.upgrades).forEach((upgrade) => {
       const nextUpgradeIndex = this.upgrades[upgrade].current + 1;
@@ -182,9 +188,8 @@ class Game {
       }
     });
 
-    if(this.currentPoints >= 1000) {
-      this.setScreen("game-end-screen")
-      this.playAudio("sound-music", "./sounds/congratulations.mp3")
+    if (this.currentPoints >= 1000) {
+      this.onGameEnd();
     }
   }
 
